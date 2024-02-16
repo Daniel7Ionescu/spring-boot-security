@@ -1,4 +1,4 @@
-package com.dan.sec3.models;
+package com.dan.security_test.models.user;
 
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;

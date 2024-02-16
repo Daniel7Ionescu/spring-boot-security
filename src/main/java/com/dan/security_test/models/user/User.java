@@ -1,5 +1,6 @@
-package com.dan.sec3.models;
+package com.dan.security_test.models.user;
 
+import com.dan.security_test.models.Role;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -15,8 +16,11 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
 
-    @Column(name = "first)name")
+    @Column(name = "first_name")
     public String firstName;
+
+    @Column(name = "last_name")
+    public String lastName;
 
     @Column(name = "email", unique = true)
     public String email;
@@ -36,8 +40,9 @@ public class User {
         this.authorities = new HashSet<>();
     }
 
-    public User(String firstName, String email, String password, Set<Role> authorities) {
+    public User(String firstName, String lastName, String email, String password, Set<Role> authorities) {
         this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
         this.password = password;
         this.authorities = authorities;

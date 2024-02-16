@@ -1,24 +1,21 @@
-package com.dan.sec3.services;
+package com.dan.security_test.services;
 
-import com.dan.sec3.models.SecurityUser;
-import com.dan.sec3.models.User;
-import com.dan.sec3.repositories.UserRepository;
+import com.dan.security_test.models.user.SecurityUser;
+import com.dan.security_test.models.user.User;
+import com.dan.security_test.repositories.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Slf4j
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
-    private final PasswordEncoder passwordEncoder;
     private final UserRepository userRepository;
 
-    public UserDetailsServiceImpl(PasswordEncoder passwordEncoder, UserRepository userRepository) {
-        this.passwordEncoder = passwordEncoder;
+    public UserDetailsServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
