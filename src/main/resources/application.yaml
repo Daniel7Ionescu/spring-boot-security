@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jwt1
+    username: dev
+    password: cow
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: create-drop
+      dialect: org.hibernate.dialect.SQLDialect
+      format_sql: true
