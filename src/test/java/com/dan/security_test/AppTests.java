@@ -1,10 +1,10 @@
-package com.dan.sec3;
+package com.dan.security_test;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Sec3ApplicationTests {
+class AppTests {
 
 	@Test
 	void contextLoads() {
